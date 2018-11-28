@@ -1,0 +1,5 @@
+.bgimg {
+    background-image: url("https://picsum.photos/1000?random");
+    background-size:cover;
+    height: 500px;
+}
