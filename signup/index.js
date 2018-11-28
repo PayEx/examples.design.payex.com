@@ -30,3 +30,4 @@ if (checkbox && validateForms > 0) {
     });
 }
 
+// TODO: Fix password validation [AW]
