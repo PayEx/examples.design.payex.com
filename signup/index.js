@@ -16,16 +16,6 @@ const toggleDisabled = () => {
     }
 }
 
-pwVal.addEventListener("change", () => {
-    return pwVal.value === confirmPwVal.value;
-});
-
-confirmPwVal.addEventListener("change", () => {
-    return confirmPwVal.value === pwVal.value;
-});
-
-
-
 if (forms.length > 0) {
     forms.forEach(form => (
         form.addEventListener("change", () => {
