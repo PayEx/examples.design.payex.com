@@ -44,10 +44,10 @@
         <div class="row no-gutters justify-content-center">
             <section class="panel panel-default col-lg-10">
                 <header>
-                    <h2 class="panel-title">Create account</h2>
+                    <h2 class="panel-title">Fill out the fields</h2>
                 </header>
                 <div class="panel-body">
-                    <form>
+                    <form novalidate>
                         <div class="input-group mb-3">
                             <span class="input-group-addon">Drop down menu</span>
                             <select class="form-control">
@@ -62,7 +62,7 @@
                                 <div class="form-group">
                                     <label for="first-name">Some information that is required</label>
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="full-name" placeholder="Enter your info" autoComplete="name" required  data-validate />
+                                        <input type="text" class="form-control" id="some-input" placeholder="Enter your info" autoComplete="name" required  data-validate />
                                     </div>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@
                                 <div class="form-group">
                                     <label for="first-name">Another input field which is not required</label>
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="full-name" placeholder="Enter your info" autoComplete="name" />
+                                        <input type="text" class="form-control" id="more-input" placeholder="Enter your info" />
                                     </div>
                                 </div>
                             </div>
@@ -78,9 +78,9 @@
                         <div class="form-group">
                             <label for="date-of-birth">Input field for a date</label>
                             <div class="input-group">
-                                <input type="datetime" class="form-control" id="date-of-birth" placeholder="Enter some date with validation" autoComplete="date" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" data-validate />
+                                <input type="datetime" class="form-control" id="date-of-birth" placeholder="Enter some date with validation" autoComplete="date" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" data-validate />
                             </div>
-                            <div class="help-block">MM.DD.YYYY</div>
+                            <div class="help-block">DD.MM.YYYY</div>
                         </div>
                         <div class="form-group">
                             <label for="email-address">Email</label>
@@ -89,6 +89,13 @@
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col-md-9">
+                                <label for="input-id-4">Special requests</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="material-icons">format_quote</i></span>
+                                    <textarea type="textarea" class="form-control" id="input-id-4" placeholder="Extra frosting, no pineapple..."></textarea>
+                                </div>
+                            </div>
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label>Pick one</label>
@@ -102,19 +109,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-9">
-                                <label for="input-id-4">Special requests</label>
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="material-icons">format_quote</i></span>
-                                    <textarea type="textarea" class="form-control" id="input-id-4" placeholder="Extra frosting, no pineapple..."></textarea>
-                                </div>
-                            </div>
                         </div>
                         <div class="form-group">
                             <label for="first-name">Password</label>
                             <div class="input-group">
-                                <input type="password" class="form-control" id="password" placeholder="Enter your password" required  data-validate />
+                                <input type="password" class="form-control" id="password" placeholder="Enter your password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" data-validate />
                             </div>
+                            <div class="help-block">Use eight symbols containing a mix of letters, numbers and symbols. Must contain atleast one capital letter.</div>
                         </div>
                         <div class="form-group">
                             <label for="confirm-password">Confirm password</label>
