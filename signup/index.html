@@ -114,15 +114,16 @@
                             <div class="form-group">
                                 <label for="first-name">Password</label>
                                 <div class="input-group">
-                                    <input type="password" class="form-control" id="password" placeholder="Enter your password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" data-validate />
+                                    <input type="password" class="form-control" id="password" placeholder="Enter your password" required pattern="^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,}$" data-validate />
                                 </div>
-                                <div class="help-block">Use eight symbols containing a mix of letters, numbers and symbols. Must contain atleast one capital letter.</div>
+                                <div class="help-block">Password must be longer than eight symbols and must contain one capital letter.</div>
                             </div>
                             <div class="form-group">
                                 <label for="confirm-password">Confirm password</label>
                                 <div class="input-group">
-                                    <input type="password" class="form-control" id="confirm-password" placeholder="Confirm password" required  data-validate />
+                                    <input type="password" class="form-control" id="confirm-password" placeholder="Confirm password" required />
                                 </div>
+                                <div class="help-block" data-error="Password doesn't match"></div>
                             </div>
                             <div class="form-group">
                                 <div class="checkbox">

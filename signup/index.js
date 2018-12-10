@@ -16,6 +16,18 @@ const toggleDisabled = () => {
     }
 }
 
+const checkIfEqual = () => {
+    if (password.value === confirmpassword.value && password.closest(".form-group").classList.contains("has-success")) {
+        confirmpassword.closest(".form-group").classList.remove("has-error");
+        confirmpassword.closest(".form-group").classList.add("has-success");
+        toggleDisabled();
+    } else {
+        confirmpassword.closest(".form-group").classList.remove("has-success");
+        confirmpassword.closest(".form-group").classList.add("has-error");
+        toggleDisabled();
+    }
+}
+
 if (forms.length && validateForms.length) {
     if(checkbox){
         checkbox.addEventListener("click", () => toggleDisabled());
@@ -26,8 +38,7 @@ if (forms.length && validateForms.length) {
     ));
 }
 
-if(password && confirmpassword) {
-    password.addEventListener("change", () => {
-        
-    });
+if (password && confirmpassword) {
+    confirmpassword.addEventListener("change", () => checkIfEqual());
+    password.addEventListener("change", () => checkIfEqual());
 }
