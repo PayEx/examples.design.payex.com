@@ -1,157 +1,168 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Account creation</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://design.payex.com/v/0.14.2/styles/px.css" />
-</head>
-<body>
-    <div class="topbar">
-        <a href="https://design.payex.com/" class="topbar-logo"></a>
-        <button type="button" class="topbar-btn" data-sheet-open="demo-sheet">
-            <i class="material-icons">face</i>
-            <span class="topbar-btn-text">Support</span>
-        </button>
-    </div>
-    <div class="sheet" id="demo-sheet">
-        <section>
-            <a href="#" class="sheet-close">
-                <i class="material-icons">close</i>
-            </a>
-            <h2 class="color-brand">Support</h2>
-            <p>If you wish to contact support you can call or send us an email.</p>
-            <ul class="list">
-                <li><a href="mailto:payex.payex@payex.com">payex.payex@payex.com</a></li>
-                <li><a href="tel:666 66 666">666 66 666</a></li>
-            </ul>
-            <hr />
-            <p>You can expect us to answer mail at these hours:</p>
-            <ul>
-                <li>Monday - Friday: 08.00 - 21.45</li>
-                <li>Saturday: 12.00 - 17.45</li>
-                <li>Sunday: 12.00 - 18.45</li>
-            </ul>
-            <p>For phone calls:</p>
-            <ul>
-                <li>Business inquiries: Monday - Friday: 9 - 16</li>
-                <li>Other inquiries: Monday - Friday: 9 - 15</li>
-            </ul>
-        </section>
-    </div>
-    <div class="container mt-2 mb-2">
-        <div class="row justify-content-center">
-            <div class="col-lg-12">
-                <section class="panel panel-default">
-                    <header>
-                        <h2 class="panel-title">Fill out the fields</h2>
-                    </header>
-                    <div class="panel-body">
-                        <form novalidate>
-                            <div class="input-group mb-3">
-                                <span class="input-group-addon">Drop down menu</span>
-                                <select class="form-control">
-                                    <option>Option 1</option>
-                                    <option>Option 2</option>
-                                    <option>Option 3</option>
-                                    <option>Option 4</option>
-                                </select>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="first-name">Some information that is required</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" id="some-input" placeholder="Enter your info" autoComplete="name" required  data-validate />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">    
-                                    <div class="form-group">
-                                        <label for="first-name">Another input field which is not required</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" id="more-input" placeholder="Enter your info" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="date-of-birth">Input field for a date</label>
-                                <div class="input-group">
-                                    <input type="datetime" class="form-control" id="date-of-birth" placeholder="Enter some date with validation" autoComplete="date" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" data-validate />
-                                </div>
-                                <div class="help-block">DD.MM.YYYY</div>
-                            </div>
-                            <div class="form-group">
-                                <label for="email-address">Email</label>
-                                <div class="input-group">
-                                    <input type="email" class="form-control" id="email-address" placeholder="Enter your email" autoComplete="on"  required  data-validate />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <label for="input-id-4">Special requests</label>
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="material-icons">format_quote</i></span>
-                                        <textarea type="textarea" class="form-control" id="input-id-4" placeholder="Extra frosting, no pineapple..."></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label>Pick one</label>
-                                        <div class="radio">
-                                            <input type="radio" id="radio-example-1" name="radio-example" />
-                                            <label for="radio-example-1">Hamburgers</label>
-                                        </div>
-                                        <div class="radio">
-                                            <input type="radio" id="radio-example-2" name="radio-example" />
-                                            <label for="radio-example-2">Pizza<label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="first-name">Password</label>
-                                <div class="input-group">
-                                    <input type="password" class="form-control" id="password" placeholder="Enter your password" required pattern="^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,}$" data-validate />
-                                </div>
-                                <div class="help-block">Password must be longer than eight symbols and must contain one capital letter.</div>
-                            </div>
-                            <div class="form-group">
-                                <label for="confirm-password">Confirm password</label>
-                                <div class="input-group">
-                                    <input type="password" class="form-control" id="confirm-password" placeholder="Confirm password" required />
-                                </div>
-                                <div class="help-block" data-error="Password doesn't match"></div>
-                            </div>
-                            <div class="form-group">
-                                <div class="checkbox">
-                                    <input type="checkbox" id="privacy-policy" />
-                                    <label for="privacy-policy">I Agree To The <a href="https://design.payex.com/v/0.14.0/">Privacy Policy</a></label>
-                                </div>
-                            </div>
-                            <div class="row justify-content-end no-gutters">
-                                <button class="btn btn-danger mr-2" type="button">Cancel</button>
-                                <button class="btn btn-primary" disabled id="sign-up" type="submit" data-disable-invalid>Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                </section>
-            </div>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Account creation</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://design.payex.com/v/0.14.2/styles/px.css" />
+        <!-- NB! Remove this if you are copying the markup -->
+        <style>
+            #github-icon {
+                position: fixed;
+                width: 5rem;
+                right: 1rem;
+                bottom: 1rem;
+                opacity: 0.6;
+            }
+
+            #github-icon:hover {
+                opacity: 1;
+            }
+        </style>
+        <!-- NB! Remove this if you are copying the markup -->
+    </head>
+    <body>
+        <div class="topbar">
+            <a href="https://design.payex.com/" class="topbar-logo"></a>
+            <button type="button" class="topbar-btn" data-sheet-open="demo-sheet">
+                <i class="material-icons">face</i>
+                <span class="topbar-btn-text">Support</span>
+            </button>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-auto ml-auto">
-                <a href="https://github.com/PayEx/examples.design.payex.com/tree/master/signup" target="_blank" rel="noopener noreferrer" style="border: none">
-                    <svg aria-labelledby="simpleicons-github-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="height: 2rem">
-                        <title id="simpleicons-github-icon">GitHub icon</title>
-                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
-                    </svg>
+        <div class="sheet" id="demo-sheet">
+            <section>
+                <a href="#" class="sheet-close">
+                    <i class="material-icons">close</i>
                 </a>
+                <h2 class="color-brand">Support</h2>
+                <p>If you wish to contact support you can call or send us an email.</p>
+                <ul class="list">
+                    <li><a href="mailto:payex.payex@payex.com">payex.payex@payex.com</a></li>
+                    <li><a href="tel:666 66 666">666 66 666</a></li>
+                </ul>
+                <hr />
+                <p>You can expect us to answer mail at these hours:</p>
+                <ul>
+                    <li>Monday - Friday: 08.00 - 21.45</li>
+                    <li>Saturday: 12.00 - 17.45</li>
+                    <li>Sunday: 12.00 - 18.45</li>
+                </ul>
+                <p>For phone calls:</p>
+                <ul>
+                    <li>Business inquiries: Monday - Friday: 9 - 16</li>
+                    <li>Other inquiries: Monday - Friday: 9 - 15</li>
+                </ul>
+            </section>
+        </div>
+        <div class="container mt-2 mb-2">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <section class="panel panel-default">
+                        <header>
+                            <h2 class="panel-title">Fill out the fields</h2>
+                        </header>
+                        <div class="panel-body">
+                            <form novalidate>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-addon">Drop down menu</span>
+                                    <select class="form-control">
+                                        <option>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                        <option>Option 4</option>
+                                    </select>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="first-name">Some information that is required</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="some-input" placeholder="Enter your info" autoComplete="name" required  data-validate />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">    
+                                        <div class="form-group">
+                                            <label for="first-name">Another input field which is not required</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="more-input" placeholder="Enter your info" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="date-of-birth">Input field for a date</label>
+                                    <div class="input-group">
+                                        <input type="datetime" class="form-control" id="date-of-birth" placeholder="Enter some date with validation" autoComplete="date" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" data-validate />
+                                    </div>
+                                    <div class="help-block">DD.MM.YYYY</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email-address">Email</label>
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" id="email-address" placeholder="Enter your email" autoComplete="on"  required  data-validate />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <label for="input-id-4">Special requests</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="material-icons">format_quote</i></span>
+                                            <textarea type="textarea" class="form-control" id="input-id-4" placeholder="Extra frosting, no pineapple..."></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Pick one</label>
+                                            <div class="radio">
+                                                <input type="radio" id="radio-example-1" name="radio-example" />
+                                                <label for="radio-example-1">Hamburgers</label>
+                                            </div>
+                                            <div class="radio">
+                                                <input type="radio" id="radio-example-2" name="radio-example" />
+                                                <label for="radio-example-2">Pizza<label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="first-name">Password</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" id="password" placeholder="Enter your password" required pattern="^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,}$" data-validate />
+                                    </div>
+                                    <div class="help-block">Password must be longer than eight symbols and must contain one capital letter.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirm-password">Confirm password</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" id="confirm-password" placeholder="Confirm password" required />
+                                    </div>
+                                    <div class="help-block" data-error="Password doesn't match"></div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <input type="checkbox" id="privacy-policy" />
+                                        <label for="privacy-policy">I Agree To The <a href="https://design.payex.com/v/0.14.0/">Privacy Policy</a></label>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-end no-gutters">
+                                    <button class="btn btn-danger mr-2" type="button">Cancel</button>
+                                    <button class="btn btn-primary" disabled id="sign-up" type="submit" data-disable-invalid>Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
-    </div>
-</body>
-<script src="https://design.payex.com/v/0.14.2/scripts/px-script.js"></script>
-<script src="./index.js"></script>
+        <!-- NB! Remove this if you are copying the markup -->
+        <button class="btn btn-link" id="github-icon" type="button" data-tooltip="View source">
+            <a href="https://github.com/PayEx/examples.design.payex.com/blob/master/signup/index.html" target="_blank" rel="noopener noreferrer" style="border: none">
+                <img src="../github_icon.svg"/>
+        </button>
+        <!-- NB! Remove this if you are copying the markup -->
+    </body>
+    <script src="https://design.payex.com/v/0.14.2/scripts/px-script.js"></script>
+    <script src="./index.js"></script>
 </html>
