@@ -17,15 +17,21 @@ const toggleDisabled = () => {
 }
 
 const checkIfEqual = () => {
+    let removeClass;
+    let addClass;
+
+
     if (password.value === confirmpassword.value && password.closest(".form-group").classList.contains("has-success")) {
-        confirmpassword.closest(".form-group").classList.remove("has-error");
-        confirmpassword.closest(".form-group").classList.add("has-success");
-        toggleDisabled();
+        removeClass = "has-error";
+        addClass = "has-success";
     } else {
-        confirmpassword.closest(".form-group").classList.remove("has-success");
-        confirmpassword.closest(".form-group").classList.add("has-error");
-        toggleDisabled();
+        removeClass = "has-success";
+        addClass = "has-error";
     }
+
+    confirmpassword.closest(".form-group").classList.remove(removeClass);
+    confirmpassword.closest(".form-group").classList.add(addClass);
+    toggleDisabled();
 }
 
 if (forms.length && validateForms.length) {
