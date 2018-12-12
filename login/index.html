@@ -6,7 +6,21 @@
     <title>Logg inn</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://design.payex.com/v/0.14.2/styles/px.css" />
-    <link rel="stylesheet" href="./index.css" />
+    <!-- NB! Remove this if you are copying the markup -->
+    <style>
+        #github-icon {
+            position: fixed;
+            width: 5rem;
+            right: 1rem;
+            bottom: 1rem;
+            opacity: 0.6;
+        }
+
+        #github-icon:hover {
+            opacity: 1;
+        }
+    </style>
+    <!-- NB! Remove this if you are copying the markup -->
     </head>
     <body>
         <div class="topbar">
@@ -41,39 +55,60 @@
                 </ul>
             </section>
         </div>
-        <div class="container mt-md-3">
-            <div class="row no-gutters justify-content-center">
-                <section class="panel panel-default col-lg-10">
-                    <div class="row">
-                        <div class="panel-body col-md-6 col-lg-4 pt-md-5 pb-md-5">
-                            <h2 class="color-brand mt-md-5">Login</h2>
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="material-icons">person</i></span>
-                                    <input type="text" class="form-control" id="input-id-1" placeholder="Brukernavn" />
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-9">
+                    <section class="panel panel-default">
+                        <div class="row no-gutters">
+                            <div class="col-lg-4 bg-white">
+                                <div class="panel-body mt-lg-5">
+                                    <h2 class="color-brand">Login</h2>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="material-icons">person</i></span>
+                                            <input type="text" class="form-control" id="input-id-1" placeholder="Brukernavn" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="material-icons">vpn_key</i></span>
+                                            <input type="password" class="form-control" id="input-id-2" placeholder="Passord" />
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary btn-block mb-lg-5" type="button"><i class="material-icons">lock_open</i>Logg inn</button>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="material-icons">vpn_key</i></span>
-                                    <input type="text" class="form-control" id="input-id-2" placeholder="Passord" />
-                                </div>
+                            <div class="col-lg-8 d-none d-lg-block p-0">
+                                <img src="https://picsum.photos/1000/600?image=216" class="w-100 h-100"/>
                             </div>
-                            <button class="btn btn-primary btn-block mb-md-5" type="button"><i class="material-icons">lock_open</i>Logg inn</button>
                         </div>
-                        <div class="col d-none d-md-block p-0">
-                            <img class="img-fluid" src="https://picsum.photos/1000/700?image=115" />
+                    </section>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-9">
+                    <hr>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-md-9">
+                    <div class="row no-gutters">
+                        <div class="col-auto">
+                            <footer class="footer">
+                                <p>© 2018 PayEx. All rights reserved</p>
+                            </footer>
                         </div>
                     </div>
-                </section>  
-            </div>
-            <div class="row justify-content-center no-gutters">
-                <hr class="col-lg-10">
-                <footer class="footer col-lg-10">
-                    <p>© 2018 PayEx. All rights reserved</p>
-                </footer>
+                </div>
             </div>
         </div>
+        <!-- NB! Remove this if you are copying the markup -->
+        <button class="btn btn-link d-none d-sm-block" id="github-icon" type="button" data-tooltip="View source">
+            <a href="https://github.com/PayEx/examples.design.payex.com/blob/master/login/index.html" target="_blank" rel="noopener noreferrer" style="border: none">
+                <img src="../github_icon.svg"/>
+            </a>
+        </button>
+        <!-- NB! Remove this if you are copying the markup -->
     </body>
     <script src="https://design.payex.com/v/0.14.2/scripts/px-script.js"></script>
 </html>
